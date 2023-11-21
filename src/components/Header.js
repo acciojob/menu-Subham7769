@@ -6,9 +6,9 @@ const Header = () => {
         <h1 className='headingTxt'>Our Menu</h1>
         <ul>
             <li>All</li>
-            <li>Breakfast</li>
-            <li>Lunch</li>
-            <li>Shakes</li>
+            <li id='filter-btn-1'>Breakfast</li>
+            <li id='filter-btn-2'>Lunch</li>
+            <li id='filter-btn-3'>Shakes</li>
         </ul>
     </div>
   )

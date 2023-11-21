@@ -3,7 +3,7 @@ let Data = require('./Data.json');
 
 const Product = () => {
   return (
-    <div className='main'>
+    <div id='main'>
       { Data.length === 0 ? "No data Found" :
         Data.map((e) => {
           return (
