@@ -6,18 +6,27 @@ let Data = require('./Data.json');
 
 const Product = (props) => {
 
-    let Category = props.Category;//category from context
+    let Category = props.Category;
+
     console.log(Category); 
+    
+    //filter the products
     let filterData = Data.filter((e)=>{
         if(Category == 'All'){
             return e;
         }
-        else {
-            return e.category == Category
+        else if(Category == 'menu-item-breakfast'){
+            return e.category == "breakfast"
         }
-    });//filter the products
+        else if(Category == 'menu-item-lunch'){
+            return e.category == "lunch"
+        }
+        else if(Category == 'menu-item-shakes'){
+            return e.category == "shakes"
+        }
+    });
     
-    // let filterData = Data;
+ 
 
   return (
     <div id='main'>

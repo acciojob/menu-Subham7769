@@ -15,9 +15,9 @@ const Header = () => {
         <h1 className='headingTxt'>Our Menu</h1>
         <ul>
             <li data-test-id="All" value={Category} onClick={filterCategory}>All</li>
-            <li id='filter-btn-1' data-test-id="breakfast" onClick={filterCategory}>Breakfast</li>
-            <li id='filter-btn-2' data-test-id="lunch"  onClick={filterCategory}>Lunch</li>
-            <li id='filter-btn-3' data-test-id="shakes"  onClick={filterCategory}>Shakes</li>
+            <li id='filter-btn-1' data-test-id="menu-item-breakfast" onClick={filterCategory}>Breakfast</li>
+            <li id='filter-btn-2' data-test-id="menu-item-lunch"  onClick={filterCategory}>Lunch</li>
+            <li id='filter-btn-3' data-test-id="menu-item-shakes"  onClick={filterCategory}>Shakes</li>
         </ul>
         <Product Category={Category}/>
 
