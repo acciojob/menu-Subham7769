@@ -1,13 +1,30 @@
 import React from 'react'
 let Data = require('./Data.json');
 
-const Product = () => {
+
+
+
+const Product = (props) => {
+
+    let Category = props.Category;//category from context
+    console.log(Category); 
+    let filterData = Data.filter((e)=>{
+        if(Category == 'All'){
+            return e;
+        }
+        else {
+            return e.category == Category
+        }
+    });//filter the products
+    
+    // let filterData = Data;
+
   return (
     <div id='main'>
-      { Data.length === 0 ? "No data Found" :
-        Data.map((e) => {
+      { filterData.length === 0 ? "No data Found" :
+        filterData.map((e) => {
           return (
-            <div className="product">
+            <div className="product" key={e.id}>
               <div className="productImg">
                 <img src={e.img} alt="product" />
               </div>
